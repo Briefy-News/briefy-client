@@ -14,13 +14,15 @@ function Header() {
 
   return (
     <>
-      <header className="w-full h-[120px] flex justify-between items-center">
+      <header className="w-full h-[66px] sm:h-[120px] flex justify-between items-center">
         {!showSearch && (
           <>
             {width > 767 && <div className="w-[75px] h-[22px]" />}
 
             <NavLink to="/">
-              <Logo />
+              <div className="w-[80px] h-[24px] sm:w-[112px] sm:h-[35px]">
+                <Logo />
+              </div>
             </NavLink>
           </>
         )}

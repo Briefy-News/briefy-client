@@ -48,7 +48,9 @@ function User() {
               </button>
               <ModalHeader className="flex justify-center items-center w-full py-[59px]">
                 <NavLink to="/">
-                  <Logo />
+                  <div className="w-[112px] h-[35px]">
+                    <Logo />
+                  </div>
                 </NavLink>
               </ModalHeader>
               <div className="px-[49px]">
