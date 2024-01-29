@@ -1,7 +1,7 @@
 import { useClickOutside } from '@reactuses/core';
-import SearchIcon from 'src/components/icons/SearchIcon';
+import SearchIcon from 'src/assets/icons/SearchIcon';
 import styled from 'styled-components';
-import XIcon from 'src/components/icons/XIcon';
+import XIcon from 'src/assets/icons/XIcon';
 import { Dispatch, SetStateAction, useRef } from 'react';
 import { fadeInFromRight } from 'src/styled/keyframes';
 

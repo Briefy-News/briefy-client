@@ -1,11 +1,15 @@
-import GoogleIcon from 'src/components/icons/GoogleIcon';
+import GoogleIcon from 'src/assets/icons/GoogleIcon';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import ContinueGoogleIcon from '../icons/ContinueGoogleIcon';
+import ContinueGoogleIcon from '../../assets/icons/ContinueGoogleIcon';
 
 function ContinueGoogle() {
   return (
-    <GoogleNavLink to="/interest" className="flex gap-3 justify-center items-center w-full h-[48px] border-2 border-indigo-600 rounded-[10px]">
+    <GoogleNavLink
+      to="/interest"
+      className="flex gap-3 justify-center items-center w-full border-2 border-indigo-600
+        h-[40px] sm:h-[48px] rounded-[6px] sm:rounded-[10px]"
+    >
       <GoogleIcon />
       <ContinueGoogleIcon />
     </GoogleNavLink>

@@ -1,7 +1,12 @@
+import FadeInLayout from 'src/components/Layout/FadeInLayout';
+import Banner from 'src/components/Main/Banner';
+
 function MainPage() {
   return (
     <>
-      <div>MainPage</div>
+      <FadeInLayout>
+        <Banner />
+      </FadeInLayout>
     </>
   );
 }
