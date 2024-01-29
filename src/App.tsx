@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import DefaultLayout from 'src/components/Layout/DefaultLayout';
 import 'src/style/global.css';
-import 'react-horizontal-scrolling-menu/dist/styles.css';
 
 import Header from 'src/components/Header/Header';
 import Nav from 'src/components/Nav/Nav';

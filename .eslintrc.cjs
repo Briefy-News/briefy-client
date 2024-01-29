@@ -9,6 +9,6 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    'jsx-a11y/control-has-associated-label': 'off'
+    'jsx-a11y/control-has-associated-label': 'off',
   },
 }

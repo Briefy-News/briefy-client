@@ -21,7 +21,6 @@
     "pretendard": "^1.3.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-horizontal-scrolling-menu": "^4.1.2",
     "react-router-dom": "^6.21.1",
     "typescript": "^5.3.3"
   },
@@ -39,7 +38,7 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "app": "^0.1.0",
     "autoprefixer": "^10.4.16",
-    "briefy-design": "^1.0.8",
+    "briefy-design": "^1.0.9",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",

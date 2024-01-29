@@ -6,6 +6,7 @@ import letterPng from 'src/assets/png/letter.png';
 import { motion } from 'framer-motion';
 
 import SignInModal from 'src/components/Modal/SignInModal';
+import styled from 'styled-components';
 
 function Banner() {
   const { width } = useWindowSize();
@@ -14,7 +15,7 @@ function Banner() {
 
   return (
     <div className="pt-[24px]">
-      <section className="overflow-hidden md:overflow-visible relative h-[174px] rounded-[12px] md:rounded-[32px] md:h-[336px] flex items-center pl-[20px] md:pl-[120px] w-full bg-black100">
+      <Section className="overflow-hidden md:overflow-visible relative h-[174px] rounded-[12px] md:rounded-[32px] md:h-[336px] flex items-center pl-[20px] md:pl-[120px] w-full bg-black100">
         <div>
           <motion.h2
             initial={{ opacity: 0, x: -40 }}
@@ -60,9 +61,25 @@ function Banner() {
           />
         )}
         <SignInModal {...modalProps} />
-      </section>
+      </Section>
     </div>
   );
 }
 
 export default Banner;
+
+const Section = styled.section`
+  position: relative;
+
+  @media all and (max-width: 767px) {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 24px;
+      width: 17px;
+      height: 126px;
+      background: linear-gradient(to left, transparent, var(--black-100));
+    }
+  }
+`;
