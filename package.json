@@ -58,7 +58,7 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "app": "^0.1.0",
     "autoprefixer": "^10.4.16",
-    "briefy-design": "^1.0.9",
+    "briefy-design": "^1.1.0",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",

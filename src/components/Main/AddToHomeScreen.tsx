@@ -1,4 +1,4 @@
-import { Button } from '@ui';
+import { Button } from 'briefy-design';
 import RightArrow from 'src/assets/icons/RightArrow';
 import useA2HS from 'src/hook/useA2HS';
 

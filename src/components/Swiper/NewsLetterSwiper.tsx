@@ -1,7 +1,5 @@
-// import { NewsLetterCard } from 'briefy-design';
-import { NewsLetterCard } from '@ui';
-import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { NewsLetterCard } from 'briefy-design';
+import { SwiperSlide } from 'swiper/react';
 import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from '@reactuses/core';
 import { SwiperData } from 'src/types/swiper';

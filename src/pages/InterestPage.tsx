@@ -1,5 +1,4 @@
-// import { Interest, Button } from 'briefy-design';
-import { Interest, Button } from '@ui';
+import { Interest, Button } from 'briefy-design';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import FadeInLayout from 'src/components/Layout/FadeInLayout';
