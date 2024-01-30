@@ -23,7 +23,7 @@ function Header() {
           </>
         )}
 
-        <div className={`flex items-center h-[22px] ${showSearch ? 'w-full' : 'w-[75px] justify-between'}`}>
+        <div className={`flex items-center h-[22px] ${showSearch ? 'w-full' : 'flex gap-[17px] md:gap-[34px]'}`}>
           {(!showSearch && !isInterestPage) && <User />}
           {!isInterestPage && <Search showSearch={showSearch} setShowSearch={setShowSearch} />}
         </div>

@@ -1,4 +1,5 @@
-import { Interest, Button } from 'briefy-design';
+// import { Interest, Button } from 'briefy-design';
+import { Interest, Button } from '@ui';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import FadeInLayout from 'src/components/Layout/FadeInLayout';
@@ -47,6 +48,7 @@ function InterestPage() {
             title="브리피 시작하기"
             size="big"
             mode={isEmpty ? 'disabled' : 'blue'}
+            mobileHeight="38px"
           />
         </div>
       </div>

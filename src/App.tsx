@@ -10,15 +10,17 @@ import CategoryPage from 'src/pages/CategoryPage';
 
 function App() {
   return (
-    <DefaultLayout>
-      <Header />
-      <Nav />
+    <>
+      <DefaultLayout>
+        <Header />
+        <Nav />
+      </DefaultLayout>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/interest" element={<InterestPage />} />
         <Route path="/:category" element={<CategoryPage />} />
       </Routes>
-    </DefaultLayout>
+    </>
   );
 }
 

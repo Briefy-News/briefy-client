@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import DefaultLayout from 'src/components/Layout/DefaultLayout';
 import FadeInLayout from 'src/components/Layout/FadeInLayout';
 
 function CategoryPage() {
@@ -7,8 +8,10 @@ function CategoryPage() {
   return (
     <>
       <FadeInLayout>
-        <div>CategoryPage</div>
-        {category}
+        <DefaultLayout>
+          <div>CategoryPage</div>
+          {category}
+        </DefaultLayout>
       </FadeInLayout>
     </>
   );

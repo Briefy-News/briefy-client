@@ -2,7 +2,7 @@ import { useClickOutside } from '@reactuses/core';
 import SearchIcon from 'src/assets/icons/SearchIcon';
 import styled from 'styled-components';
 import XIcon from 'src/assets/icons/XIcon';
-import { Dispatch, SetStateAction, useRef } from 'react';
+import { Dispatch, SetStateAction, useRef, FormEvent } from 'react';
 import { fadeInFromRight } from 'src/styled/keyframes';
 
 interface Props {
@@ -17,6 +17,10 @@ function Search({ showSearch, setShowSearch }: Props) {
     setShowSearch(false);
   });
 
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <div ref={searchRef} className={`h-[120px] flex items-center ${showSearch && 'w-full justify-end'}`}>
       <div onClick={() => setShowSearch(true)} className="cursor-pointer">
@@ -25,7 +29,7 @@ function Search({ showSearch, setShowSearch }: Props) {
 
       {showSearch
         && (
-          <SearchBox className="w-full flex items-center">
+          <Form onSubmit={handleSubmit} className="w-full flex items-center">
             <Input
               type="text"
               placeholder="검색어를 입력해 주세요"
@@ -33,12 +37,13 @@ function Search({ showSearch, setShowSearch }: Props) {
             />
 
             <button
+              type="button"
               onClick={() => setShowSearch(false)}
               className="w-[16px] h-[16px] text-black900"
             >
               <XIcon />
             </button>
-          </SearchBox>
+          </Form>
         )}
     </div>
   );
@@ -60,6 +65,6 @@ const Input = styled.input`
   }
 `;
 
-const SearchBox = styled.div`
+const Form = styled.form`
   animation: ${fadeInFromRight} 0.18s linear;
 `;

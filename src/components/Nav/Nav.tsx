@@ -10,9 +10,9 @@ import TravelIcon from 'src/assets/icons/nav/TravelIcon';
 import MediaIcon from 'src/assets/icons/nav/MediaIcon';
 import FoodIcon from 'src/assets/icons/nav/FoodIcon';
 import { NavLink, useLocation } from 'react-router-dom';
-import { useRef, useState, WheelEvent } from 'react';
-import styled from 'styled-components';
+import { useEffect, useRef, useState, WheelEvent } from 'react';
 import { smoothScroll } from 'src/utils/smoothScroll';
+import styled from 'styled-components';
 
 function Nav() {
   const scrollRef = useRef<HTMLUListElement>(null);
@@ -37,14 +37,28 @@ function Nav() {
   const handleWheel = (e: WheelEvent) => {
     if (!e || !scrollRef.current) return;
     const delta = e.deltaY || e.detail;
+
     if (delta !== 0) {
       e.preventDefault();
       const newScrollLeft = scrollLeft + delta;
+      scrollRef.current.scrollLeft = newScrollLeft;
 
       smoothScroll(scrollRef, newScrollLeft, 300);
       setScrollLeft(newScrollLeft);
     }
   };
+
+  useEffect(() => {
+    const currentRef = scrollRef.current;
+    if (currentRef) {
+      currentRef.addEventListener('wheel', handleWheel as unknown as EventListener, { passive: false });
+    }
+    return () => {
+      if (currentRef) {
+        currentRef.removeEventListener('wheel', handleWheel as unknown as EventListener);
+      }
+    };
+  }, [scrollLeft]);
 
   return (
     <>
@@ -52,7 +66,6 @@ function Nav() {
         <StyledNav>
           <StyledUl
             ref={scrollRef}
-            onWheel={handleWheel}
             className="max-w-full overflow-x-auto px-[13.5px] py-[8px] flex gap-3 items-center rounded-[16px] bg-black100"
           >
             <div className="w-[300px] flex gap-3">

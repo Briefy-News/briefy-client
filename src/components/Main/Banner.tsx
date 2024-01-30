@@ -55,7 +55,7 @@ function Banner() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 40 }}
             transition={{ duration: 0.7 }}
-            className="absolute md:w-[280px] transition-width duration-300 ease-linear lg:w-[360px] top-[40px] right-[120px]"
+            className="absolute md:w-[280px] lg:w-[360px] transition-width duration-300 ease-linear top-[40px] right-[120px]"
             src={letterPng}
             alt="letter"
           />
