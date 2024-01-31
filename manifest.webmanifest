@@ -1,0 +1,22 @@
+{
+  "name": "briefy",
+  "icons": [
+    {
+      "src": "/public/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/public/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "display": "fullscreen",
+  "start_url": "/",
+  "description": "시간이 없어도 세상은 궁금하니까! 세상 돌아가는 소식을 쉽고 재미있게 받아보세요",
+  "background_color": "white",
+  "short_name": "short name",
+  "theme_color": "#5569FF",
+  "orientation": "portrait"
+}

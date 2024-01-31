@@ -34,7 +34,7 @@ function NewsLetterSwiper() {
   };
 
   const title = (
-    <div className="block md:flex text-base md:text-[1.5rem] text-black900 font-light">
+    <div className="block md:flex md:items-center h-[44px] md:h-[64px] text-base md:text-[1.5rem] mb-[16px] md:mb-[24px] text-black900 font-light">
       브리피에서&nbsp;
       <h2><span className="font-semibold">요즘 핫한 뉴스레터</span>를 소개해드려요</h2>
     </div>

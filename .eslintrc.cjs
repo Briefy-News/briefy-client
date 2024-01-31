@@ -10,5 +10,6 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'jsx-a11y/control-has-associated-label': 'off',
+    'react/require-default-props': 'off',
   },
 }

@@ -1,24 +1,5 @@
 {
   "name": "briefy",
-  "icons": [
-    {
-      "src": "/public/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/public/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "display": "fullscreen",
-  "start_url": "https://briefy.vercel.app/",
-  "description": "시간이 없어도 세상은 궁금하니까! 세상 돌아가는 소식을 쉽고 재미있게 받아보세요",
-  "background_color": "white",
-  "short_name": "short name",
-  "theme_color": "#5569FF",
-  "orientation": "portrait",
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
@@ -58,7 +39,7 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "app": "^0.1.0",
     "autoprefixer": "^10.4.16",
-    "briefy-design": "^1.1.0",
+    "briefy-design": "^1.1.1",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",

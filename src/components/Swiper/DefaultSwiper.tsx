@@ -8,9 +8,10 @@ interface Props {
   swiperData: SwiperData;
   handleSlideChange: (idx: number) => void;
   children: ReactNode;
+  delay?: number;
 }
 
-function DefaultSwiper({ swiperData, handleSlideChange, children }: Props) {
+function DefaultSwiper({ swiperData, handleSlideChange, delay = 4000, children }: Props) {
   return (
     <StyledSwiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -20,8 +21,8 @@ function DefaultSwiper({ swiperData, handleSlideChange, children }: Props) {
       }}
       slidesPerView={swiperData.slidesPerView}
       spaceBetween={swiperData.spaceBetween}
-      autoplay={window.innerWidth >= 768 ? { delay: 4000, disableOnInteraction: false } : undefined}
-      className="mt-[16px] md:mt-[24px] flex justify-center max-w-full"
+      autoplay={window.innerWidth >= 768 ? { delay, disableOnInteraction: false } : undefined}
+      className="flex justify-center max-w-full"
       onSlideChange={(e) => handleSlideChange(e.activeIndex)}
     >
       {children}
