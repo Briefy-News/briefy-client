@@ -21,7 +21,7 @@ function SignInModal({ isOpen, onOpenChange }: Props) {
               <XIcon />
             </button>
             <ModalHeader className="flex justify-center items-center w-full pt-0 pb-0 sm:pt-[59px]">
-              <NavLink to="/">
+              <NavLink to="/" className="text-primary">
                 <Logo />
               </NavLink>
             </ModalHeader>

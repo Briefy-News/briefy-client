@@ -11,4 +11,12 @@ export default defineConfig({
       '@ui': path.resolve(__dirname, './libs/ui'),
     },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: './index.html',
+        sw: './sw.js',
+      },
+    },
+  },
 });

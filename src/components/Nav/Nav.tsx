@@ -13,6 +13,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { useEffect, useRef, useState, WheelEvent } from 'react';
 import { smoothScroll } from 'src/utils/smoothScroll';
 import styled from 'styled-components';
+import DefaultLayout from '../Layout/DefaultLayout';
 
 function Nav() {
   const scrollRef = useRef<HTMLUListElement>(null);
@@ -41,7 +42,6 @@ function Nav() {
     if (delta !== 0) {
       e.preventDefault();
       const newScrollLeft = scrollLeft + delta;
-      scrollRef.current.scrollLeft = newScrollLeft;
 
       smoothScroll(scrollRef, newScrollLeft, 300);
       setScrollLeft(newScrollLeft);
@@ -61,7 +61,7 @@ function Nav() {
   }, [scrollLeft]);
 
   return (
-    <>
+    <DefaultLayout>
       {!isInterestPage && (
         <StyledNav>
           <StyledUl
@@ -70,9 +70,9 @@ function Nav() {
           >
             <div className="w-[300px] flex gap-3">
               {menu.map((item) => (
-                <NavLink className="flex flex-shrink-0 " key={item.id} to={`/${item.path}`}>
+                <NavLink className="flex flex-shrink-0 " key={item.id} to={`/news/${item.path}`}>
                   <div
-                    className={`${pathname === `/${item.path}` ? 'text-primary bg-secondary' : 'text-black500 bg-black100'}
+                    className={`${pathname === `/news/${item.path}` ? 'text-primary bg-secondary' : 'text-black500 bg-black100'}
                       flex items-center gap-[6px] px-[16px] h-[44px] rounded-[12px] hover:opacity-80 duration-200 transition-all ease-in-out`}
                   >
                     <div className="w-[24px] h-[24px]">
@@ -88,7 +88,7 @@ function Nav() {
           </StyledUl>
         </StyledNav>
       )}
-    </>
+    </DefaultLayout>
   );
 }
 

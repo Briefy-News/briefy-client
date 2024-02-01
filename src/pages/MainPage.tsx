@@ -1,22 +1,19 @@
-import DefaultLayout from 'src/components/Layout/DefaultLayout';
 import FadeInLayout from 'src/components/Layout/FadeInLayout';
 import AddToHomeScreen from 'src/components/Main/AddToHomeScreen';
 import Banner from 'src/components/Main/Banner';
 import ArticleSwiper from 'src/components/Swiper/ArticleSwiper';
 import NewsLetterSwiper from 'src/components/Swiper/NewsLetterSwiper';
+import Footer from 'src/components/Footer/Footer';
 
 function MainPage() {
   return (
     <>
       <FadeInLayout>
-        <DefaultLayout>
-          <Banner />
-        </DefaultLayout>
+        <Banner />
         <NewsLetterSwiper />
-        <DefaultLayout>
-          <AddToHomeScreen />
-        </DefaultLayout>
+        <AddToHomeScreen />
         <ArticleSwiper />
+        <Footer />
       </FadeInLayout>
     </>
   );
