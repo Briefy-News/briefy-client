@@ -13,7 +13,7 @@
     }
   ],
   "display": "fullscreen",
-  "start_url": "/",
+  "start_url": "https://briefy.vercel.app",
   "description": "시간이 없어도 세상은 궁금하니까! 세상 돌아가는 소식을 쉽고 재미있게 받아보세요",
   "background_color": "white",
   "short_name": "short name",

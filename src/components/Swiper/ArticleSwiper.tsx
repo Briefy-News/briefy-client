@@ -1,5 +1,4 @@
-// import { ArticleCard } from 'briefy-design';
-import { ArticleCard } from '@ui';
+import { ArticleCard } from 'briefy-design';
 import { SwiperSlide } from 'swiper/react';
 import { useEffect, useRef, useState } from 'react';
 
