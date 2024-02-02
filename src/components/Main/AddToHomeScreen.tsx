@@ -11,7 +11,7 @@ function AddToHomeScreen() {
 
   const contentHtml = (
     <div className="flex gap-5">
-      <img src="src/assets/png/icon-192.png" className="w-[70px]" alt="briefy" />
+      <img src="/icon-192.png" className="w-[70px]" alt="briefy" />
       <div className="font-light w-full flex flex-col text-black900 text-2xl">
         <div><span className="font-semibold">브리피 바로가기</span>를</div>
         <div>추가하시겠습니까?</div>
