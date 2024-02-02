@@ -8,14 +8,14 @@ import InterestPage from 'src/pages/InterestPage';
 import CategoryPage from 'src/pages/CategoryPage';
 import NewsPage from 'src/pages/NewsPage';
 import NotFoundPage from 'src/pages/NotFoundPage';
-import useIsNotFoundPage from 'src/hook/useIsNotFoundPage';
+import useIsFoundPage from 'src/hook/useIsFoundPage';
 
 function App() {
-  const isNotFoundPage = useIsNotFoundPage();
+  const isFoundPage = useIsFoundPage();
 
   return (
     <div className="relative">
-      {isNotFoundPage && (
+      {isFoundPage && (
         <>
           <Header />
           <Nav />

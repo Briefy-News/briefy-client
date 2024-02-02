@@ -2,9 +2,30 @@ import { Button } from 'briefy-design';
 import RightArrow from 'src/assets/icons/RightArrow';
 import useA2HS from 'src/hook/useA2HS';
 import DefaultLayout from 'src/components/Layout/DefaultLayout';
+import { useDisclosure } from '@nextui-org/modal';
+import DialogModal from 'src/components/Modal/DialogModal';
 
 function AddToHomeScreen() {
-  const { installApp } = useA2HS();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { clearPrompt, installApp } = useA2HS();
+
+  const contentHtml = (
+    <div className="flex gap-5">
+      <img src="src/assets/png/icon-192.png" className="w-[70px]" alt="briefy" />
+      <div className="font-light w-full flex flex-col text-black900 text-2xl">
+        <div><span className="font-semibold">브리피 바로가기</span>를</div>
+        <div>추가하시겠습니까?</div>
+      </div>
+    </div>
+  );
+  const handleConfirm = (mode: string) => {
+    if (mode === 'cancel') {
+      clearPrompt();
+    } else if (mode === 'confirm') {
+      installApp();
+    }
+  };
+  const DialogModalProps = { isOpen, onOpenChange, contentHtml, handleConfirm, rightBtnTxt: '추가하기' };
 
   return (
     <DefaultLayout>
@@ -18,7 +39,7 @@ function AddToHomeScreen() {
 
         <div className="w-[220px] md:w-[280px]">
           <Button
-            onClick={installApp}
+            onClick={onOpen}
             title="홈 화면에 브리피 추가하기"
             size="middle"
             mode="lineBlue"
@@ -32,6 +53,8 @@ function AddToHomeScreen() {
           </Button>
         </div>
       </div>
+
+      <DialogModal {...DialogModalProps} />
     </DefaultLayout>
   );
 }

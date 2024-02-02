@@ -13,7 +13,7 @@ function NotFoundPage() {
         <Lottie className="max-w-[1000px]" loop animationData={notFound} play />
         <div className="w-[80px] md:w-[131px] pb-[50px]">
           <Button
-            onClick={() => navigate(-1)}
+            onClick={() => navigate('/')}
             title="홈으로"
             size="extraSmall"
             mode="blue"

@@ -1,13 +1,17 @@
 import { ArticleCard } from 'briefy-design';
 import { SwiperSlide } from 'swiper/react';
-import { useEffect, useRef, useState } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 
 import DefaultSwiper from 'src/components/Swiper/DefaultSwiper';
 import TitleAndPrevNextbtn from 'src/components/Swiper/TitleAndPrevNextbtn';
 import { useWindowSize } from '@reactuses/core';
 import { SwiperData } from 'src/types/swiper';
 
-function ArticleSwiper() {
+interface Props {
+  title: ReactNode;
+}
+
+function ArticleSwiper({ title } : Props) {
   const num = 20;
   const [swiperData, setSwiperData] = useState<SwiperData>({ slidesPerView: 3, spaceBetween: 24, lastIdx: num - 3 });
   const [swiperIndex, setSwiperIndex] = useState(0);
@@ -37,19 +41,13 @@ function ArticleSwiper() {
     setSwiperIndex(idx);
   };
 
-  const title = (
-    <div className="block md:flex md:items-center h-[44px] md:h-[64px] text-base md:text-[1.5rem] mb-[16px] md:mb-[24px] text-black900 font-light">
-      <div className="flex"><h2><span className="font-semibold">신규 발행된 아티클</span></h2>은&nbsp;</div>
-      <div>여기 다~ 있어요</div>
-    </div>
-  );
   const titleAndPrevNextbtnProps = { title, swiperIndex, swiperData, prevRef, nextRef };
 
   return (
-    <section className="pt-[32px] md:pt-[80px] pb-[28px] md:pb-[120px]">
+    <section>
       <TitleAndPrevNextbtn {...titleAndPrevNextbtnProps} />
 
-      <div className="flex justify-center">
+      <div className="flex justify-center pt-[16px] md:pt-[24px]">
         <div className="w-full">
           <DefaultSwiper delay={5500} swiperData={swiperData} handleSlideChange={handleSlideChange}>
             {[...Array(num)].map((_, idx) => (

@@ -1,13 +1,17 @@
 import { NewsLetterCard } from 'briefy-design';
 import { SwiperSlide } from 'swiper/react';
-import { useEffect, useRef, useState } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import { useWindowSize } from '@reactuses/core';
 import { SwiperData } from 'src/types/swiper';
 
 import DefaultSwiper from 'src/components/Swiper/DefaultSwiper';
 import TitleAndPrevNextbtn from 'src/components/Swiper/TitleAndPrevNextbtn';
 
-function NewsLetterSwiper() {
+interface Props {
+  title: ReactNode;
+}
+
+function NewsLetterSwiper({ title } : Props) {
   const num = 20;
   const [swiperData, setSwiperData] = useState<SwiperData>({ slidesPerView: 3, spaceBetween: 24, lastIdx: num - 3 });
   const [swiperIndex, setSwiperIndex] = useState(0);
@@ -33,19 +37,13 @@ function NewsLetterSwiper() {
     setSwiperIndex(idx);
   };
 
-  const title = (
-    <div className="block md:flex md:items-center h-[44px] md:h-[64px] text-base md:text-[1.5rem] mb-[16px] md:mb-[24px] text-black900 font-light">
-      브리피에서&nbsp;
-      <h2><span className="font-semibold">요즘 핫한 뉴스레터</span>를 소개해드려요</h2>
-    </div>
-  );
   const titleAndPrevNextbtnProps = { title, swiperIndex, swiperData, prevRef, nextRef };
 
   return (
-    <section className="pt-[32px] md:pt-[60px] lg:pt-[142px] pb-[32px] md:pb-[80px]">
+    <section>
       <TitleAndPrevNextbtn {...titleAndPrevNextbtnProps} />
 
-      <div className="flex justify-center">
+      <div className="flex justify-center pt-[16px]">
         <div className="w-full">
           <DefaultSwiper swiperData={swiperData} handleSlideChange={handleSlideChange}>
             {[...Array(num)].map((_, idx) => (

@@ -15,7 +15,7 @@ function TitleAndPrevNextbtn({ title, swiperIndex, swiperData, prevRef, nextRef 
   return (
     <div className="flex justify-center w-full">
       <div className="w-[1240px] px-5">
-        <div className="h-[64px] flex items-center justify-between w-full">
+        <div className="h-[44px] md:h-[64px] flex items-center justify-between w-full">
           {title}
 
           <div className="w-[92px] flex gap-[12px]">
