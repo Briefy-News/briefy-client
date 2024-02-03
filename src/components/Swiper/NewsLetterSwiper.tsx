@@ -8,11 +8,11 @@ import DefaultSwiper from 'src/components/Swiper/DefaultSwiper';
 import TitleAndPrevNextbtn from 'src/components/Swiper/TitleAndPrevNextbtn';
 
 interface Props {
-  title: ReactNode;
+  title?: ReactNode;
+  num?: number;
 }
 
-function NewsLetterSwiper({ title } : Props) {
-  const num = 20;
+function NewsLetterSwiper({ title, num = 20 } : Props) {
   const [swiperData, setSwiperData] = useState<SwiperData>({ slidesPerView: 3, spaceBetween: 24, lastIdx: num - 3 });
   const [swiperIndex, setSwiperIndex] = useState(0);
   const prevRef = useRef<HTMLButtonElement>(null);
@@ -41,7 +41,7 @@ function NewsLetterSwiper({ title } : Props) {
 
   return (
     <section>
-      <TitleAndPrevNextbtn {...titleAndPrevNextbtnProps} />
+      {title && <TitleAndPrevNextbtn {...titleAndPrevNextbtnProps} />}
 
       <div className="flex justify-center pt-[16px]">
         <div className="w-full">

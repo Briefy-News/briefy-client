@@ -7,7 +7,6 @@ import FadeInLayout from 'src/components/Layout/FadeInLayout';
 import NewsLetterSwiper from 'src/components/Swiper/NewsLetterSwiper';
 import CustomSelect from 'src/components/common/CustomSelect';
 import InfiniteNewsLetter from 'src/components/common/InfiniteNewsLetter';
-import InfiniteArticle from 'src/components/common/InfiniteArticle';
 
 function CategoryPage() {
   const [orderBy, setOrderBy] = useState('subscribers');
@@ -31,9 +30,9 @@ function CategoryPage() {
   return (
     <>
       <FadeInLayout>
-        <div className="pt-[40px] md:pt-[70px] pb-[64px] md:pb-[80px]">
+        <section className="pt-[40px] md:pt-[70px] pb-[64px] md:pb-[80px]">
           <NewsLetterSwiper title={trendWeeklyView} />
-        </div>
+        </section>
         <DefaultLayout>
           <div className="h-[44px] md:h-[62px] w-full flex items-center">
             <h2 className="text-base md:text-2xl font-light text-black900">

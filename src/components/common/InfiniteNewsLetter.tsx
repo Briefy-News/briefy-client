@@ -5,7 +5,7 @@ import FadeInLayout from 'src/components/Layout/FadeInLayout';
 import LoadingLottie from 'src/components/common/LoadingLottie';
 
 function InfiniteNewsLetter() {
-  const [data, setData] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
+  const [data, setData] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   const targetRef = useRef<HTMLDivElement>(null);
   const { loading } = useInfinite({ setData, targetRef });
 

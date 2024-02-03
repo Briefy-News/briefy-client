@@ -2,8 +2,9 @@ import { useClickOutside } from '@reactuses/core';
 import SearchIcon from 'src/assets/icons/SearchIcon';
 import styled from 'styled-components';
 import XIcon from 'src/assets/icons/XIcon';
-import { Dispatch, SetStateAction, useRef, FormEvent } from 'react';
+import { Dispatch, SetStateAction, useRef, FormEvent, useState } from 'react';
 import { fadeInFromRight } from 'src/styled/keyframes';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   showSearch: boolean;
@@ -11,7 +12,9 @@ interface Props {
 }
 
 function Search({ showSearch, setShowSearch }: Props) {
+  const [query, setQuery] = useState('');
   const searchRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useClickOutside(searchRef, () => {
     setShowSearch(false);
@@ -19,6 +22,7 @@ function Search({ showSearch, setShowSearch }: Props) {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    navigate(`/search?q=${query}`);
   };
 
   return (
@@ -33,6 +37,7 @@ function Search({ showSearch, setShowSearch }: Props) {
             <Input
               type="text"
               placeholder="검색어를 입력해 주세요"
+              onChange={(e) => setQuery(e.target.value)}
               className="w-full ml-[25.23px] mr-[28px] h-[42px] rounded-[8px] pl-[12px] caret-primary text-[0.875rem] text-black placeholder:text-black500"
             />
 

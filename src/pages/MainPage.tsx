@@ -24,13 +24,13 @@ function MainPage() {
     <>
       <FadeInLayout>
         <Banner />
-        <div className="pt-[32px] md:pt-[60px] lg:pt-[142px] pb-[32px] md:pb-[80px]">
+        <section className="pt-[32px] md:pt-[60px] lg:pt-[142px] pb-[32px] md:pb-[80px]">
           <NewsLetterSwiper title={trendTitle} />
-        </div>
+        </section>
         <AddToHomeScreen />
-        <div className="pt-[32px] md:pt-[80px] pb-[28px] md:pb-[120px]">
+        <section className="pt-[32px] md:pt-[80px] pb-[28px] md:pb-[120px]">
           <ArticleSwiper title={latestTitle} />
-        </div>
+        </section>
         <Footer />
       </FadeInLayout>
     </>
