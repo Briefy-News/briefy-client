@@ -7,6 +7,7 @@ import FadeInLayout from 'src/components/Layout/FadeInLayout';
 import NewsLetterSwiper from 'src/components/Swiper/NewsLetterSwiper';
 import CustomSelect from 'src/components/common/CustomSelect';
 import InfiniteNewsLetter from 'src/components/common/InfiniteNewsLetter';
+import InfiniteArticle from 'src/components/common/InfiniteArticle';
 
 function CategoryPage() {
   const [orderBy, setOrderBy] = useState('subscribers');
