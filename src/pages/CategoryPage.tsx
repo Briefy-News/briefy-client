@@ -31,7 +31,7 @@ function CategoryPage() {
     <>
       <FadeInLayout>
         <section className="pt-[40px] md:pt-[70px] pb-[64px] md:pb-[80px]">
-          <NewsLetterSwiper title={trendWeeklyView} />
+          <NewsLetterSwiper title={trendWeeklyView} num={10} />
         </section>
         <DefaultLayout>
           <div className="h-[44px] md:h-[62px] w-full flex items-center">

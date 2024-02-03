@@ -10,6 +10,8 @@ import CategoryPage from 'src/pages/CategoryPage';
 import NewsPage from 'src/pages/NewsPage';
 import NotFoundPage from 'src/pages/NotFoundPage';
 import SearchPage from 'src/pages/SearchPage';
+import SearchNewsLetterPage from 'src/pages/SearchNewsLetterPage';
+import SearchArticlePage from 'src/pages/SearchArticlePage';
 
 function App() {
   const isFoundPage = useIsFoundPage();
@@ -27,9 +29,11 @@ function App() {
         <Route path="/interest" element={<InterestPage />} />
         <Route path="/news" element={<NewsPage />}>
           <Route path="/news/:category" element={<CategoryPage />} />
+          <Route path="/news/search" element={<SearchPage />} />
+          <Route path="/news/search/newsletter" element={<SearchNewsLetterPage />} />
+          <Route path="/news/search/article" element={<SearchArticlePage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
-        <Route path="/search" element={<SearchPage />} />
       </Routes>
     </div>
   );

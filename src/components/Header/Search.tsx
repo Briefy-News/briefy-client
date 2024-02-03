@@ -22,7 +22,7 @@ function Search({ showSearch, setShowSearch }: Props) {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    navigate(`/search?q=${query}`);
+    navigate(`/news/search?q=${query}`);
   };
 
   return (

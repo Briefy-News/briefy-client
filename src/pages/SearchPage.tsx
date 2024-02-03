@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import DefaultLayout from 'src/components/Layout/DefaultLayout';
 import ArticleSwiper from 'src/components/Swiper/ArticleSwiper';
 import NewsLetterSwiper from 'src/components/Swiper/NewsLetterSwiper';
@@ -24,7 +24,7 @@ function SearchPage() {
             <h2 className="text-base md:text-2xl font-light">
               <span className="font-semibold">뉴스레터</span>&nbsp;검색결과&nbsp;<span className="font-semibold text-primary">4개</span>
             </h2>
-            <button className="text-black500 underline font-light text-xs md:text-base">더보기</button>
+            <NavLink to={`/news/search/newsletter?q=${query}`} className="text-black500 underline font-light text-xs md:text-base">더보기</NavLink>
           </div>
         </DefaultLayout>
         <NewsLetterSwiper num={3} />
@@ -36,7 +36,7 @@ function SearchPage() {
             <h2 className="text-base md:text-2xl font-light">
               <span className="font-semibold">아티클</span>&nbsp;검색결과&nbsp;<span className="font-semibold text-primary">4개</span>
             </h2>
-            <button className="text-black500 underline font-light text-xs md:text-base">더보기</button>
+            <NavLink to={`/news/search/article?q=${query}`} className="text-black500 underline font-light text-xs md:text-base">더보기</NavLink>
           </div>
         </DefaultLayout>
         <ArticleSwiper num={4} />
