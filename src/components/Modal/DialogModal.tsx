@@ -3,16 +3,17 @@ import { Button } from 'briefy-design';
 import { ModalContent } from '@nextui-org/modal';
 import ModalBg from 'src/components/Modal/ModalBg';
 
-interface Props {
+export interface DialogModalProps {
   isOpen: boolean;
   onOpenChange: () => void;
-  handleConfirm: (mode: string) => void;
+  handleConfirm?: (ok: boolean) => void;
   rightBtnTxt?: string;
   content?: string;
   contentHtml?: ReactNode;
+  mode?: 'confirm' | 'alert';
 }
 
-function DialogModal({ isOpen, onOpenChange, handleConfirm, content, contentHtml, rightBtnTxt = '확인' }: Props) {
+function DialogModal({ isOpen, onOpenChange, handleConfirm, content, contentHtml, rightBtnTxt = '확인', mode = 'confirm' }: DialogModalProps) {
   return (
     <ModalBg isOpen={isOpen} onOpenChange={onOpenChange}>
       <ModalContent className="w-full md:max-w-[400px] rounded-[24px]">
@@ -25,15 +26,17 @@ function DialogModal({ isOpen, onOpenChange, handleConfirm, content, contentHtml
 
             <div className="pt-[50px]">
               <div className="flex gap-3">
+                {mode === 'confirm' && (
+                  <Button
+                    onClick={() => { if (handleConfirm) { handleConfirm(false); } onClose(); }}
+                    title="취소"
+                    size="medium"
+                    mode="lineGray"
+                    mobileHeight="50px"
+                  />
+                )}
                 <Button
-                  onClick={() => { handleConfirm('cancel'); onClose(); }}
-                  title="취소"
-                  size="medium"
-                  mode="lineGray"
-                  mobileHeight="50px"
-                />
-                <Button
-                  onClick={() => { handleConfirm('confirm'); onClose(); }}
+                  onClick={() => { if (handleConfirm) { handleConfirm(true); } onClose(); }}
                   title={rightBtnTxt}
                   size="medium"
                   mode="blue"

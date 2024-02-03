@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { NextUIProvider } from '@nextui-org/system';
 import App from './App.tsx';
-import 'src/style/reset.css';
 import 'src/style/global.css';
 import 'src/index.css';
 import 'swiper/css';

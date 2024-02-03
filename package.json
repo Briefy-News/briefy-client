@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nextui-org/modal": "^2.0.28",
+    "@nextui-org/select": "^2.1.20",
     "@nextui-org/system": "^2.0.15",
     "@nextui-org/theme": "^2.1.17",
     "@reactuses/core": "^4.0.13",

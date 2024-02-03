@@ -7,21 +7,19 @@ import DialogModal from 'src/components/Modal/DialogModal';
 
 function AddToHomeScreen() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const { clearPrompt, installApp } = useA2HS();
+  const { installApp } = useA2HS();
 
   const contentHtml = (
     <div className="flex gap-5">
-      <img src="/icon-192.png" className="w-[70px]" alt="briefy" />
+      <img src="/icon-192.png" className="w-[70px] h-[70px]" alt="briefy" />
       <div className="font-light w-full flex flex-col text-black900 text-2xl">
         <div><span className="font-semibold">브리피 바로가기</span>를</div>
         <div>추가하시겠습니까?</div>
       </div>
     </div>
   );
-  const handleConfirm = (mode: string) => {
-    if (mode === 'cancel') {
-      clearPrompt();
-    } else if (mode === 'confirm') {
+  const handleConfirm = (ok: boolean) => {
+    if (ok) {
       installApp();
     }
   };

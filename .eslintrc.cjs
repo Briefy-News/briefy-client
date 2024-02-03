@@ -11,5 +11,6 @@ module.exports = {
     ],
     'jsx-a11y/control-has-associated-label': 'off',
     'react/require-default-props': 'off',
+    'consistent-return': 'off'
   },
 }

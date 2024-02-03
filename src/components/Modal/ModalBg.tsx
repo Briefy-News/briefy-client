@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 interface Props {
   isOpen: boolean;
   onOpenChange: () => void;
-  children: ReactNode
+  children: ReactNode;
 }
 
 function ModalBg({ isOpen, onOpenChange, children }: Props) {
