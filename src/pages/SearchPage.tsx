@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import DefaultLayout from 'src/components/Layout/DefaultLayout';
+import FadeInLayout from 'src/components/Layout/FadeInLayout';
 import ArticleSwiper from 'src/components/Swiper/ArticleSwiper';
 import NewsLetterSwiper from 'src/components/Swiper/NewsLetterSwiper';
 
@@ -8,7 +9,7 @@ function SearchPage() {
   const query = new URLSearchParams(search).get('q');
 
   return (
-    <>
+    <FadeInLayout>
       <DefaultLayout>
         <div className="w-full flex justify-center pt-[50px] md:pt-[70px] pb-[40px] md:pb-[24px]">
           <h2 className="h-[56px]  md:h-[36px] text-center block md:flex justify-center text-black900 text-xl md:text-[1.75rem] font-light">
@@ -41,7 +42,7 @@ function SearchPage() {
         </DefaultLayout>
         <ArticleSwiper num={4} />
       </section>
-    </>
+    </FadeInLayout>
   );
 }
 
