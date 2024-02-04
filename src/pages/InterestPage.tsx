@@ -1,24 +1,13 @@
-import { Interest, Button } from 'briefy-design';
+import { Button } from 'briefy-design';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import FadeInLayout from 'src/components/Layout/FadeInLayout';
+import InterestList from 'src/components/common/InterestList';
 
 function InterestPage() {
   const [selected, setSelected] = useState<string[]>([]);
   const isEmpty = selected.length === 0;
   const navigate = useNavigate();
-
-  const handleClick = (title: string) => {
-    const isSelected = selected.includes(title);
-    if (isSelected) {
-      const newSelected = selected.filter((item) => item !== title);
-      setSelected(newSelected);
-      return;
-    }
-    setSelected([...selected, title]);
-  };
-
-  const interestList = ['비즈니스', '기술', '건강', '엔터테이먼트', '스포츠', '환경', '과학', '여행', '미디어', '푸드'];
 
   return (
     <FadeInLayout>
@@ -36,9 +25,7 @@ function InterestPage() {
         <div className="w-[280px] sm:w-[560px] md:w-[728px] pt-[40px] pb-[40px] sm:pt-[80px] sm:pb-[108px]
             grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-5 sm:gap-8 justify-center"
         >
-          {interestList.map((item, idx) => (
-            <Interest key={idx} title={item} onClick={(title: string) => handleClick(title)} />
-          ))}
+          <InterestList selected={selected} setSelected={setSelected} />
         </div>
 
         <div className="pb-[70px] w-[320px] sm:w-[358px]">

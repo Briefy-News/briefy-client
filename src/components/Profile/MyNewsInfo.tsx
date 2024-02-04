@@ -8,7 +8,7 @@ function MyNewsInfo() {
   ];
 
   return (
-    <div className="w-full pb-[16px] pt-[24px] md:pb-[40px] md:pt-[40px] ">
+    <div className="w-full pt-[24px] md:pt-[40px] ">
       <div className="py-[20px] md:py-0 px-[19px] min-w769-max-w1080:px-[45px] lg:pl-[60px] lg:pr-[82px] h-[150px] md:h-[136px] bg-black100 border-[1px] border-black300
             flex md:items-center justify-between flex-col md:flex-row w-full rounded-xl md:rounded-2xl"
       >

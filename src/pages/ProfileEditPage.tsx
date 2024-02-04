@@ -1,8 +1,15 @@
 import FadeInLayout from 'src/components/Layout/FadeInLayout';
+import MyInterestEdit from 'src/components/Profile/ProfileEdit/MyInterestEdit';
+import MyAccountInfo from 'src/components/Profile/MyAccountInfo';
+import Logout from 'src/components/Profile/ProfileEdit/Logout';
 
 function ProfileEditPage() {
   return (
-    <FadeInLayout>ProfileEditPage</FadeInLayout>
+    <FadeInLayout>
+      <MyInterestEdit />
+      <MyAccountInfo />
+      <Logout />
+    </FadeInLayout>
   );
 }
 

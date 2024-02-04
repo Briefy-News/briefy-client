@@ -15,7 +15,7 @@ function MyNewsletterPage() {
 
   return (
     <FadeInLayout>
-      <h2 className="flex items-center h-[44px] md:h-[64px] text-base md:text-2xl text-black900 font-semibold">
+      <h2 className="mt-[16px] md:mt-[40px] flex items-center h-[44px] md:h-[64px] text-base md:text-2xl text-black900 font-semibold">
         마이 뉴스레터
       </h2>
       <div className="flex justify-end">

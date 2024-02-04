@@ -41,7 +41,7 @@ function MyArticlePage() {
 
   return (
     <FadeInLayout>
-      <h2 className="flex items-center h-[44px] md:h-[64px] text-base md:text-2xl text-black900 font-semibold">
+      <h2 className="mt-[16px] md:mt-[40px] flex items-center h-[44px] md:h-[64px] text-base md:text-2xl text-black900 font-semibold">
         {title}
       </h2>
 

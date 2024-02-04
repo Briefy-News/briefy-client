@@ -20,7 +20,7 @@ specifiers:
   '@vitejs/plugin-react-swc': ^3.5.0
   app: ^0.1.0
   autoprefixer: ^10.4.16
-  briefy-design: ^1.1.4
+  briefy-design: ^1.1.6
   eslint: ^8.56.0
   eslint-config-airbnb: ^19.0.4
   eslint-plugin-import: ^2.25.3
@@ -72,7 +72,7 @@ devDependencies:
   '@vitejs/plugin-react-swc': 3.5.0_vite@5.0.12
   app: 0.1.0
   autoprefixer: 10.4.17_postcss@8.4.33
-  briefy-design: 1.1.4
+  briefy-design: 1.1.6
   eslint: 8.56.0
   eslint-plugin-import: 2.29.1_hvm5a3smsvtiibh2csiwji5sqy
   eslint-plugin-jsx-a11y: 6.8.0_eslint@8.56.0
@@ -3398,8 +3398,8 @@ packages:
     dependencies:
       fill-range: 7.0.1
 
-  /briefy-design/1.1.4:
-    resolution: {integrity: sha512-gUOQbirLsd16SRXbrE4gNbGDPDFtWwKJsqrvxk/8/Tca2x0NG/FY3OrDePiTxNl9fvQ70XR9Q8CDc7A043Jmow==}
+  /briefy-design/1.1.6:
+    resolution: {integrity: sha512-iGXb/YfTUJtGV2F4oawXnlKCLTF2Y7IHD/8+sIwvlP5P9nRBYHkkh0DpNYNsgnyVWkkIzJlA79/4n/4Iki5TVg==}
     dev: true
 
   /browserslist/4.22.2:
