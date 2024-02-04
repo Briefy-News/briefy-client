@@ -12,6 +12,11 @@ import NotFoundPage from 'src/pages/NotFoundPage';
 import SearchPage from 'src/pages/SearchPage';
 import SearchNewsLetterPage from 'src/pages/SearchNewsLetterPage';
 import SearchArticlePage from 'src/pages/SearchArticlePage';
+import ProfilePage from 'src/pages/ProfilePage';
+import MyNewsletterPage from 'src/pages/MyNewsletterPage';
+import MyArticlePage from 'src/pages/MyArticlePage';
+import SavedArticlePage from 'src/pages/SavedArticlePage';
+import ProfileEditPage from './pages/ProfileEditPage';
 
 function App() {
   const isFoundPage = useIsFoundPage();
@@ -32,6 +37,12 @@ function App() {
           <Route path="/news/search" element={<SearchPage />} />
           <Route path="/news/search/newsletter" element={<SearchNewsLetterPage />} />
           <Route path="/news/search/article" element={<SearchArticlePage />} />
+        </Route>
+        <Route path="/profile" element={<ProfilePage />}>
+          <Route path="/profile/article/:state" element={<MyArticlePage />} />
+          <Route path="/profile/newsletter" element={<MyNewsletterPage />} />
+          <Route path="/profile/saved" element={<SavedArticlePage />} />
+          <Route path="/profile/edit" element={<ProfileEditPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -12,6 +12,7 @@ export default {
       screens: {
         'max-w500': { min: '0px', max: '500px' },
         'min-w900-max-w1200': { min: '900px', max: '1200px' },
+        'min-w769-max-w1080': { min: '769px', max: '1080px' },
       },
       colors: {
         primary: '#5569FF',

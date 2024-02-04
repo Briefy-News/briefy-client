@@ -28,26 +28,24 @@ function CategoryPage() {
   const customSelectProps = { orderBy, setOrderBy, list: orderByList };
 
   return (
-    <>
-      <FadeInLayout>
-        <section className="pt-[40px] md:pt-[70px] pb-[64px] md:pb-[80px]">
-          <NewsLetterSwiper title={trendWeeklyView} num={10} />
-        </section>
-        <DefaultLayout>
-          <div className="h-[44px] md:h-[62px] w-full flex items-center">
-            <h2 className="text-base md:text-2xl font-light text-black900">
-              비지니스 뉴스레터
-            </h2>
-          </div>
-          <div className="w-full flex justify-end">
-            <CustomSelect {...customSelectProps} />
-          </div>
-          <div className="pb-[36px] pt-[16px] md:pt-[24px] md:pb-[120px]">
-            <InfiniteNewsLetter />
-          </div>
-        </DefaultLayout>
-      </FadeInLayout>
-    </>
+    <FadeInLayout>
+      <section className="pt-[40px] md:pt-[70px] pb-[64px] md:pb-[80px]">
+        <NewsLetterSwiper title={trendWeeklyView} num={10} />
+      </section>
+      <DefaultLayout>
+        <div className="h-[44px] md:h-[62px] w-full flex items-center">
+          <h2 className="text-base md:text-2xl font-light text-black900">
+            비지니스 뉴스레터
+          </h2>
+        </div>
+        <div className="w-full flex justify-end">
+          <CustomSelect {...customSelectProps} />
+        </div>
+        <div className="pb-[36px] pt-[16px] md:pt-[24px] md:pb-[120px]">
+          <InfiniteNewsLetter />
+        </div>
+      </DefaultLayout>
+    </FadeInLayout>
   );
 }
 

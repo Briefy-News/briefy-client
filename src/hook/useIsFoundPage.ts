@@ -1,10 +1,11 @@
 import { useLocation, useMatch } from 'react-router-dom';
+import { allPaths } from 'src/utils/paths';
 
 const useIsFoundPage = () => {
-  const categoryPage = useMatch('/news/:category');
   const { pathname } = useLocation();
-  const isFoundPage = categoryPage
-    || ['/', '/interest', '/news', '/news/search', '/news/search/newsletter', '/news/search/article'].includes(pathname);
+  const isCategoryPage = useMatch('/news/:category');
+  const isMyArticlePage = useMatch('/profile/article/:state');
+  const isFoundPage = isCategoryPage || isMyArticlePage || allPaths.includes(pathname);
   return isFoundPage;
 };
 

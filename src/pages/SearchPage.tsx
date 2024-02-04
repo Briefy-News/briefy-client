@@ -1,8 +1,9 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import DefaultLayout from 'src/components/Layout/DefaultLayout';
 import FadeInLayout from 'src/components/Layout/FadeInLayout';
-import ArticleSwiper from 'src/components/Swiper/ArticleSwiper';
+
 import NewsLetterSwiper from 'src/components/Swiper/NewsLetterSwiper';
+import ArticleSwiper from 'src/components/Swiper/ArticleSwiper';
 
 function SearchPage() {
   const { search } = useLocation();
