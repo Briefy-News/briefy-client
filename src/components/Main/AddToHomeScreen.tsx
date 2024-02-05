@@ -9,7 +9,7 @@ import useToast from 'src/hook/useToast';
 function AddToHomeScreen() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const { installApp } = useA2HS();
-  const { successToast, errorToast } = useToast();
+  const { successToast } = useToast();
 
   const contentHtml = (
     <div className="flex gap-5">
