@@ -34,7 +34,7 @@ function Calendar() {
               <button className={isMatch ? 'text-black300' : 'text-black700'} onClick={decreaseMonth} disabled={prevMonthButtonDisabled || isMatch}>
                 <ReftTriangleIcon />
               </button>
-              <span className="text-[20px] text-black900 font-semibold flex items-center">
+              <span className="year-month text-[1.25rem] text-black900 font-semibold flex items-center">
                 {getYear(monthDate)}.{getMonth(monthDate)}
               </span>
               <button onClick={increaseMonth} disabled={nextMonthButtonDisabled}>
@@ -88,7 +88,7 @@ const CalendarBlock = styled.div`
     justify-content: center;
     gap: 19px;
   }
-  .react-datepicker__month{
+  .react-datepicker__month {
     height: 248px;
     margin: 8.5px 0 23.5px 0;
     display: flex;
@@ -133,5 +133,21 @@ const CalendarBlock = styled.div`
   }
   .react-datepicker__day--keyboard-selected {
     background-color: var(--black-300);
+  }
+  .year-month {
+    font-size: 20px;
+  }
+
+
+  @media all and (max-width: 767px) {
+    .react-datepicker__day-names {
+      gap: 13px;
+    }
+    .react-datepicker__month {
+      gap: 13px;
+    }
+    .react-datepicker__week {
+      gap: 13px;
+    }
   }
 `;

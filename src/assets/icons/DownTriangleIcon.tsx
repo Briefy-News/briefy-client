@@ -8,7 +8,7 @@ function DownTriangleIcon() {
     >
       <g clipPath="url(#a)">
         <path
-          fill="#5569FF"
+          fill="currentColor"
           fillRule="evenodd"
           d="M12.707 14.536a1 1 0 0 1-1.414 0l-2.83-2.829A1 1 0 0 1 9.173 10h5.656a1 1 0 0 1 .708 1.707l-2.83 2.829Z"
           clipRule="evenodd"
