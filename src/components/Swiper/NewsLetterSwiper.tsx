@@ -6,6 +6,7 @@ import { SwiperData } from 'src/types/swiper';
 
 import DefaultSwiper from 'src/components/Swiper/DefaultSwiper';
 import TitleAndPrevNextbtn from 'src/components/Swiper/TitleAndPrevNextbtn';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   title?: ReactNode;
@@ -17,6 +18,7 @@ function NewsLetterSwiper({ title, num = 20 } : Props) {
   const [swiperIndex, setSwiperIndex] = useState(0);
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
+  const navigate = useNavigate();
 
   const { width } = useWindowSize();
   useEffect(() => {
@@ -52,7 +54,7 @@ function NewsLetterSwiper({ title, num = 20 } : Props) {
                   title={`뉴닉 ${idx + 1}`}
                   category="경제"
                   description="시간이 없어도 세상은 궁금하니까! 세상 돌아가는 소식을 쉽고 재미있게 받아보세요"
-                  onClick={() => alert('뉴스레터')}
+                  onClick={() => navigate(`/news/${'business'}/${idx + 1}`)}
                 />
               </SwiperSlide>
             ))}

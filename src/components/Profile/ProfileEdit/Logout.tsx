@@ -8,7 +8,7 @@ function Logout() {
 
   const handleLogout = () => {
     navigate('/', { replace: true });
-    successToast('로그아웃이 완료되었습니다.');
+    successToast('로그아웃 되었습니다.');
   };
 
   return (

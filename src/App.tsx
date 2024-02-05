@@ -16,7 +16,9 @@ import ProfilePage from 'src/pages/ProfilePage';
 import MyNewsletterPage from 'src/pages/MyNewsletterPage';
 import MyArticlePage from 'src/pages/MyArticlePage';
 import SavedArticlePage from 'src/pages/SavedArticlePage';
-import ProfileEditPage from './pages/ProfileEditPage';
+import ProfileEditPage from 'src/pages/ProfileEditPage';
+import NewsPostPage from 'src/pages/NewsPostPage';
+import NewsPostSubPage from 'src/pages/NewsPostSubPage';
 
 function App() {
   const isFoundPage = useIsFoundPage();
@@ -34,6 +36,8 @@ function App() {
         <Route path="/interest" element={<InterestPage />} />
         <Route path="/news" element={<NewsPage />}>
           <Route path="/news/:category" element={<CategoryPage />} />
+          <Route path="/news/:category/:postId" element={<NewsPostPage />} />
+          <Route path="/news/:category/:postId/sub" element={<NewsPostSubPage />} />
           <Route path="/news/search" element={<SearchPage />} />
           <Route path="/news/search/newsletter" element={<SearchNewsLetterPage />} />
           <Route path="/news/search/article" element={<SearchArticlePage />} />
