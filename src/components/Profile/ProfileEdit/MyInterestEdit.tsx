@@ -1,10 +1,23 @@
+import { useDisclosure } from '@nextui-org/modal';
 import { Button } from 'briefy-design';
 import { useState } from 'react';
+import useToast from 'src/hook/useToast';
+import DialogModal from 'src/components/Modal/DialogModal';
 import InterestList from 'src/components/common/InterestList';
 
 function MyInterestEdit() {
   const [selected, setSelected] = useState<string[]>(['비즈니스', '엔터테이먼트', '여행']);
   const isEmpty = selected.length === 0;
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { successToast } = useToast();
+
+  const handleConfirm = (ok: boolean) => {
+    if (ok) {
+      // 유저 정보 변경
+      successToast('수정이 완료되었습니다.');
+    }
+  };
+  const DialogModalProps = { isOpen, onOpenChange, handleConfirm, content: '수정하시겠습니까?' };
 
   return (
     <>
@@ -14,7 +27,7 @@ function MyInterestEdit() {
         </h2>
         <div className="hidden md:block">
           <Button
-            onClick={() => alert('click!')}
+            onClick={onOpen}
             title="수정하기"
             size="small"
             mode={isEmpty ? 'disabled' : 'lineBlue'}
@@ -31,13 +44,14 @@ function MyInterestEdit() {
       </div>
       <div className="block md:hidden pt-[16px] pb-[32px]">
         <Button
-          onClick={() => alert('click!')}
+          onClick={onOpen}
           title="수정하기"
           size="small"
           mode={isEmpty ? 'disabled' : 'lineBlue'}
           mobileHeight="38px"
         />
       </div>
+      <DialogModal {...DialogModalProps} />
     </>
   );
 }

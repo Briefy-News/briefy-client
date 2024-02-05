@@ -19,10 +19,10 @@ function CustomSelect({ orderBy, setOrderBy, list }: Props) {
       selectedKeys={[orderBy]}
       style={{ height: '40px' }}
       classNames={{
-        trigger: 'min-h-[32px] md:min-h-[40px] text-sm rounded-[6px] px-[12px] py-0 border-[1px] border-black300',
-        value: 'text-black900 text-sm',
+        trigger: 'min-h-[32px] md:min-h-[40px] text-sm rounded-[6px] pl-[12px] pr-[8px] py-0 border-[1px] border-black300',
+        value: 'text-black900 text-sm font-light',
         popoverContent: 'rounded-[10px]',
-        selectorIcon: ' w-auto h-auto origin-center absolute right-[13px] top-[8px] md:right-[17px] text-black500',
+        selectorIcon: 'w-auto h-auto origin-center absolute right-[8px] md:right-[13px] top-[8px] md:right-[17px] text-black500',
       }}
       selectorIcon={<div><DownArrowIcon /></div>}
     >

@@ -4,10 +4,12 @@ import useA2HS from 'src/hook/useA2HS';
 import DefaultLayout from 'src/components/Layout/DefaultLayout';
 import { useDisclosure } from '@nextui-org/modal';
 import DialogModal from 'src/components/Modal/DialogModal';
+import useToast from 'src/hook/useToast';
 
 function AddToHomeScreen() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const { installApp } = useA2HS();
+  const { successToast, errorToast } = useToast();
 
   const contentHtml = (
     <div className="flex gap-5">
@@ -21,6 +23,7 @@ function AddToHomeScreen() {
   const handleConfirm = (ok: boolean) => {
     if (ok) {
       installApp();
+      successToast('브리피 바로가기가 추가되었습니다.');
     }
   };
   const DialogModalProps = { isOpen, onOpenChange, contentHtml, handleConfirm, rightBtnTxt: '추가하기' };

@@ -52,7 +52,7 @@ function MyArticlePage() {
               key={id}
               to={`/profile/article/${path}`}
               className={`${state === path ? 'text-white bg-black900' : 'border-black300 text-black500 bg-white'}
-                text-sm  px-[16px] h-[40px] rounded-[6px] font-light border-[1px] flex justify-center items-center transition-background duration-200 ease-in-out hover:opacity-80`}
+                text-sm  px-[16px] h-[40px] rounded-[6px] font-light border-[1px] flex justify-center items-center transition-all duration-100`}
             >
               {name}
             </NavLink>
