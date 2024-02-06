@@ -30,7 +30,7 @@ function DialogModal({ isOpen, onOpenChange, handleConfirm, content, contentHtml
                   <Button
                     onClick={() => { if (handleConfirm) { handleConfirm(false); } onClose(); }}
                     title="취소"
-                    size="medium"
+                    size="middle"
                     mode="lineGray"
                     mobileHeight="50px"
                   />
@@ -38,7 +38,7 @@ function DialogModal({ isOpen, onOpenChange, handleConfirm, content, contentHtml
                 <Button
                   onClick={() => { if (handleConfirm) { handleConfirm(true); } onClose(); }}
                   title={rightBtnTxt}
-                  size="medium"
+                  size="middle"
                   mode="blue"
                   mobileHeight="50px"
                 />

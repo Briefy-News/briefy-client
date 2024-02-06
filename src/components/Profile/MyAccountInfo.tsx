@@ -18,7 +18,9 @@ function MyAccountInfo() {
           <div key={id} className="block md:flex gap-[8px] md:gap-[40px]">
             <div className="md:h-[48px] flex items-center mb-[8px] md:mb-0 text-sm md:text-base text-black500 font-semibold">{label}</div>
             <div className="relative">
-              <Input type="text" mode="gray2" value={value} />
+              <div className="w-auto md:w-[358px]">
+                <Input type="text" mode="gray2" value={value} />
+              </div>
               {desc && <p className="absolute left-0 text-black500 text-sm mt-[4px] md:mt-[8px] font-light">{desc}</p>}
             </div>
           </div>

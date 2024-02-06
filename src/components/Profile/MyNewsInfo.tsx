@@ -25,7 +25,7 @@ function MyNewsInfo() {
             <li key={id} className="flex justify-between items-center">
               <NavLink to={`/profile/${path}`}>
                 <div className="w-full min-w769-max-w1080:w-[120px] lg:w-[132px]  flex flex-col justify-between">
-                  <span className="text-black500 text-sm md:text-base">
+                  <span className="text-black500 text-sm md:text-base max-w380:text-[0.75rem]">
                     {title}
                   </span>
                   <span className="mt-[4px] md:mt-[8px] text-black900 text-base md:text-2xl font-semibold">

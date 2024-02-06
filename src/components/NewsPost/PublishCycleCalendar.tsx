@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useWindowSize } from '@reactuses/core';
 
 function PublishCycleCalendar() {
-  const [showCalendar, setShowCalendar] = useState(true);
+  const [showCalendar, setShowCalendar] = useState<boolean>();
   const { width } = useWindowSize();
 
   useEffect(() => {

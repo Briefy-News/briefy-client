@@ -56,6 +56,7 @@ function Calendar() {
 export default Calendar;
 
 const CalendarBlock = styled.div`
+  height: 352px;
   .react-datepicker {
     width: 100%;
     height: 352px;
@@ -137,6 +138,9 @@ const CalendarBlock = styled.div`
   .year-month {
     font-size: 20px;
   }
+  .react-datepicker__day--selected .react-datepicker__day--outside-month {
+    border: 1px solid var(--black-300);
+  }
 
 
   @media all and (max-width: 767px) {
@@ -148,6 +152,9 @@ const CalendarBlock = styled.div`
     }
     .react-datepicker__week {
       gap: 13px;
+    }
+    .react-datepicker {
+      height: auto;
     }
   }
 `;

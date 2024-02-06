@@ -1,7 +1,12 @@
+import { useDisclosure } from '@nextui-org/modal';
 import { Button } from 'briefy-design';
 import styled from 'styled-components';
+import CreateMailModal from '../Modal/CreateMailModal';
 
 function NewsSubscribe() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const createMailModalProps = { isOpen, onOpenChange };
+
   return (
     <>
       <div className="flex-col pr-[14px] pl-[12px] md:pr-[31px] md:pl-[30px] py-[12px] md:py-[30px] min-w769-max-w1180:w-full lg:w-[792px] h-auto md:h-[416px] rounded-[10px] md:rounded-[16px] border-[1px] border-black300">
@@ -21,7 +26,7 @@ function NewsSubscribe() {
               </p>
               <div className="hidden md:block">
                 <Button
-                  onClick={() => alert('click!')}
+                  onClick={onOpen}
                   title="브리피로 구독하기"
                   size="big"
                   mode="blue"
@@ -34,13 +39,14 @@ function NewsSubscribe() {
       </div>
       <div className="py-[16px] block md:hidden">
         <Button
-          onClick={() => alert('click!')}
+          onClick={onOpen}
           title="브리피로 구독하기"
           size="big"
           mode="blue"
           mobileHeight="38px"
         />
       </div>
+      <CreateMailModal {...createMailModalProps} />
     </>
   );
 }

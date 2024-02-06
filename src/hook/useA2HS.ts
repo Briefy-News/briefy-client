@@ -15,10 +15,15 @@ const useA2HS = () => {
   }, []);
 
   const installApp = () => {
+    let result = false;
     deferredPrompt?.prompt();
-    deferredPrompt?.userChoice.then(() => {
+    deferredPrompt?.userChoice.then((res: any) => {
+      if (res.outcome === 'accepted') {
+        result = true;
+      }
       clearPrompt();
     });
+    return result;
   };
 
   const clearPrompt = () => {

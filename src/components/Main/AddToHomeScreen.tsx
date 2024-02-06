@@ -22,8 +22,10 @@ function AddToHomeScreen() {
   );
   const handleConfirm = (ok: boolean) => {
     if (ok) {
-      installApp();
-      successToast('브리피 바로가기가 추가되었습니다.');
+      const res = installApp();
+      if (res) {
+        successToast('브리피 바로가기가 추가되었습니다.');
+      }
     }
   };
   const DialogModalProps = { isOpen, onOpenChange, contentHtml, handleConfirm, rightBtnTxt: '추가하기' };
