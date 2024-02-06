@@ -142,8 +142,8 @@ const CalendarBlock = styled.div`
     border: 1px solid var(--black-300);
   }
 
-
   @media all and (max-width: 767px) {
+    height: auto;
     .react-datepicker__day-names {
       gap: 13px;
     }
@@ -154,6 +154,9 @@ const CalendarBlock = styled.div`
       gap: 13px;
     }
     .react-datepicker {
+      height: auto;
+    }
+    .react-datepicker__month {
       height: auto;
     }
   }

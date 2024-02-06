@@ -5,6 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import DialogModal from 'src/components/Modal/DialogModal';
 import { useDisclosure } from '@nextui-org/modal';
 import useToast from 'src/hook/useToast';
+import Iframe from 'react-iframe';
 
 function NewsPostSubPage() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -16,6 +17,7 @@ function NewsPostSubPage() {
     if (ok) {
       // 뉴스레터 구독하기
       successToast('뉴스레터가 구독되었습니다.');
+      navigate(-1);
     }
   };
   const DialogModalProps = { isOpen, onOpenChange, handleConfirm, content: '뉴스레터를 구독하시겠습니까?' };
@@ -33,7 +35,15 @@ function NewsPostSubPage() {
             </div>
           </div>
 
-          <div className="w-full h-[400px] md:h-[700px] rounded-[20px] border-[1px] border-black300" />
+          <div className="w-full h-[400px] md:h-[700px] rounded-[20px] border-[1px] border-black300 overflow-hidden">
+            <Iframe
+              url="https://news.jtbc.co.kr/article/article.aspx?news_id=NB12164249&log=jtbc|news|index_main_news"
+              width="100%"
+              height="100%"
+              display="block"
+              position="relative"
+            />
+          </div>
 
           <div className="pt-[32px] md:pt-[24px] flex justify-center">
             <div className="flex w-full md:w-[740px] gap-[12px] md:gap-[24px]">
