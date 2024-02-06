@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import LogoAndDesc from 'src/components/Modal/CreateMailModal/LogoAndDesc';
 import BriefyEmail from 'src/components/Modal/CreateMailModal/BriefyEmail';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 interface Props {
   isOpen: boolean;
@@ -16,10 +16,16 @@ function CreateMailModal({ isOpen, onOpenChange }: Props) {
   const [email, setEmail] = useState('');
   const [isEmailCreated, setIsEmailCreated] = useState(false);
   const navigate = useNavigate();
+  const { category, postId } = useParams();
 
-  const handleCreateEmail = () => {
+  const handleCreateEmail = (onClose: () => void) => {
     // 이메일 생성
-    setIsEmailCreated(true);
+    if (!isEmailCreated) {
+      setIsEmailCreated(true);
+      return;
+    }
+    navigate(`/news/${category}/${postId}/sub`);
+    onClose();
   };
 
   return (
@@ -39,7 +45,7 @@ function CreateMailModal({ isOpen, onOpenChange }: Props) {
 
             <div className="flex gap-[12px] md:gap-[16px]">
               <Button
-                onClick={handleCreateEmail}
+                onClick={() => handleCreateEmail(onClose)}
                 title={isEmailCreated ? '뉴스레터 구독하러 가기' : '이메일 만들기'}
                 size="middle"
                 mode="blue"
