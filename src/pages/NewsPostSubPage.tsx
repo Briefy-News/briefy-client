@@ -5,7 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import DialogModal from 'src/components/Modal/DialogModal';
 import { useDisclosure } from '@nextui-org/modal';
 import useToast from 'src/hook/useToast';
-import Iframe from 'react-iframe';
+import NewsIframe from 'src/components/common/NewsIframe';
 
 function NewsPostSubPage() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -36,13 +36,7 @@ function NewsPostSubPage() {
           </div>
 
           <div className="w-full h-[400px] md:h-[700px] rounded-[20px] border-[1px] border-black300 overflow-hidden">
-            <Iframe
-              url="https://news.jtbc.co.kr/article/article.aspx?news_id=NB12164249&log=jtbc|news|index_main_news"
-              width="100%"
-              height="100%"
-              display="block"
-              position="relative"
-            />
+            <NewsIframe url="https://news.jtbc.co.kr/article/article.aspx?news_id=NB12164249&log=jtbc|news|index_main_news" />
           </div>
 
           <div className="pt-[32px] md:pt-[24px] flex justify-center">
