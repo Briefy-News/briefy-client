@@ -1,27 +1,7 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import BookIcon from 'src/assets/icons/BookIcon';
 import styled from 'styled-components';
 
 function MyInfoBeingSoldToday() {
-  const [timeLeft, setTimeLeft] = useState(600);
-  const [percent, setPercent] = useState(100);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (timeLeft > 0) {
-        setTimeLeft((prevTime) => prevTime - 1);
-        setPercent(Math.floor((timeLeft / 600) * 100));
-      }
-    }, 100);
-    if (timeLeft <= 0) {
-      navigate(-1);
-    }
-
-    return () => clearInterval(interval);
-  }, [timeLeft]);
-
   return (
     <div className="flex flex-col w-full h-[66px] md:h-[120px] justify-between z-10
           absolute top-0 backdrop-blur-lg backdrop-saturate-150 b bg-background/70"
@@ -34,16 +14,16 @@ function MyInfoBeingSoldToday() {
           <BookIcon />
         </div>
       </div>
-      <ProgressBar $percent={percent} />
+      <ProgressBar />
     </div>
   );
 }
 
 export default MyInfoBeingSoldToday;
 
-const ProgressBar = styled.div<{ $percent: number }>`
+const ProgressBar = styled.div`
   background-color: var(--primary);
   height: 4px;
-  width: ${({ $percent }) => `${$percent}%`};
+  width: 100%;
   transition: all 1s linear;
 `;

@@ -1,5 +1,6 @@
 import DefaultLayout from 'src/components/Layout/DefaultLayout';
 import FadeInLayout from 'src/components/Layout/FadeInLayout';
+import Calendar from 'src/components/NewsPost/Calendar';
 import NewsSubscribe from 'src/components/NewsPost/NewsSubscribe';
 import NextUploadDate from 'src/components/NewsPost/NextUploadDate';
 import PublishCycleCalendar from 'src/components/NewsPost/PublishCycleCalendar';
@@ -19,6 +20,9 @@ function NewsPostPage() {
           <NewsSubscribe />
           <div className="w-full">
             <NextUploadDate />
+            <div className="hidden md:block">
+              <Calendar />
+            </div>
             <PublishCycleCalendar />
           </div>
         </div>

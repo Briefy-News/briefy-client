@@ -15,7 +15,7 @@ function CategoryPage() {
 
   const trendWeeklyView = (
     <div className="text-base md:text-[1.5rem] text-black900 font-light">
-      <h2 className="block md:flex md:items-center">{categoryTxt} 주간 조회순&nbsp;<div className="font-semibold">TOP 10</div></h2>
+      <h2 className="block md:flex md:items-center">{categoryTxt} 주간&nbsp;<div>조회순 <span className="font-semibold">TOP 10</span></div></h2>
     </div>
   );
 
@@ -35,7 +35,7 @@ function CategoryPage() {
       <DefaultLayout>
         <div className="h-[44px] md:h-[62px] w-full flex items-center">
           <h2 className="text-base md:text-2xl font-light text-black900">
-            비지니스 뉴스레터
+            {categoryTxt} 뉴스레터
           </h2>
         </div>
         <div className="w-full flex justify-end">

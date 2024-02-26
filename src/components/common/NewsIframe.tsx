@@ -21,6 +21,7 @@ function NewsIframe({ url } : Props) {
         position="relative"
       />
     </motion.div>
+
   );
 }
 

@@ -1,4 +1,5 @@
 import { useDisclosure } from '@nextui-org/modal';
+import { useDebounceFn } from '@reactuses/core';
 import { Button } from 'briefy-design';
 import { useState } from 'react';
 import useToast from 'src/hook/useToast';
@@ -11,12 +12,12 @@ function MyInterestEdit() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const { successToast } = useToast();
 
-  const handleConfirm = (ok: boolean) => {
+  const { run: handleConfirm } = useDebounceFn((ok: boolean) => {
     if (ok) {
       // 유저 정보 변경
       successToast('수정이 완료되었습니다.');
     }
-  };
+  }, 100);
   const DialogModalProps = { isOpen, onOpenChange, handleConfirm, content: '수정하시겠습니까?' };
 
   return (
