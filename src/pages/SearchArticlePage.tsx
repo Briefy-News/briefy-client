@@ -24,7 +24,7 @@ function SearchArticlePage() {
         <div className="w-full flex justify-center pt-[50px] md:pt-[70px] pb-[60px] md:pb-[24px]">
           <h2 className="h-[56px]  md:h-[36px] text-center block md:flex justify-center text-black900 text-xl md:text-[1.75rem] font-light">
             <span className="font-semibold">{query}</span>&nbsp;에 대한&nbsp;
-            <div>총 4개의&nbsp;<span className="font-semibold text-primary">뉴스레터</span>&nbsp;검색 결과예요.</div>
+            <div>총 4개의&nbsp;<span className="font-semibold text-primary">아티클</span>&nbsp;검색 결과예요.</div>
           </h2>
         </div>
 
