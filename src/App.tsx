@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import useIsFoundPage from 'src/hook/useIsFoundPage';
 import 'src/style/global.css';
+import { Helmet } from 'react-helmet';
 
 import Header from 'src/components/Header/Header';
 import Nav from 'src/components/Nav/Nav';
@@ -25,6 +26,12 @@ function App() {
 
   return (
     <div className="relative">
+      <Helmet>
+        <meta property="og:title" content="Briefy - 뉴스레터 구독 서비스" />
+        <meta property="og:description" content="시간이 없어도 세상은 궁금하니까! 세상 돌아가는 소식을 쉽고 재미있게 받아보세요" />
+        <meta property="og:image" content="/share.png" />
+        <title>Briefy</title>
+      </Helmet>
       {isFoundPage && (
         <>
           <Header />

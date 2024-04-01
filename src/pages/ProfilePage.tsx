@@ -17,12 +17,14 @@ function ProfilePage() {
   }, []);
 
   return (
-    <FadeInLayout>
-      <DefaultLayout>
-        <MyNewsInfo />
-        <Outlet />
-      </DefaultLayout>
-    </FadeInLayout>
+    <>
+      <FadeInLayout>
+        <DefaultLayout>
+          <MyNewsInfo />
+          <Outlet />
+        </DefaultLayout>
+      </FadeInLayout>
+    </>
   );
 }
 
