@@ -11,6 +11,8 @@ module.exports = {
     ],
     'jsx-a11y/control-has-associated-label': 'off',
     'react/require-default-props': 'off',
-    'consistent-return': 'off'
+    'consistent-return': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    'import/order': 'off'
   },
 }
