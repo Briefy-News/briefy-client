@@ -33,7 +33,7 @@ function AddToHomeScreen() {
   return (
     <DefaultLayout>
       <div className={`w-full h-[92px] md:h-[120px] rounded-[8px] md:rounded-[16px] px-[20px] md:px-[60px]
-          bg-cover bg-center bg-[url('src/assets/png/subbanner.png')]
+          bg-cover bg-center bg-[url('/subbanner.png')]
           flex flex-col justify-center gap-[8px] md:flex-row md:justify-between md:items-center md:gap-0`}
       >
         <div className="text-[0.875rem] flex md:block lg:flex md:text-[1.7rem] lg:text-[2rem] font-light text-white">

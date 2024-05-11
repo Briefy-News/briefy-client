@@ -2,7 +2,7 @@ import { Button } from 'briefy-design';
 import { useWindowSize } from '@reactuses/core';
 import { useDisclosure } from '@nextui-org/modal';
 import RightArrow from 'src/assets/icons/RightArrow';
-import letterPng from 'src/assets/png/letter.png';
+// import letterPng from '@/public/letter.png';
 import { motion } from 'framer-motion';
 import DefaultLayout from 'src/components/Layout/DefaultLayout';
 
@@ -58,7 +58,7 @@ function Banner() {
               exit={{ opacity: 0, y: 40 }}
               transition={{ duration: 0.7 }}
               className="absolute md:w-[280px] lg:w-[360px] transition-width duration-300 ease-linear top-[40px] right-[120px]"
-              src={letterPng}
+              src="/letter.png"
               alt="letter"
             />
           )}

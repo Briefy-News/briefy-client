@@ -2,11 +2,11 @@ import { NewsLetterCard } from 'briefy-design';
 import { SwiperSlide } from 'swiper/react';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import { useWindowSize } from '@reactuses/core';
+import { useNavigate } from 'react-router-dom';
 import { SwiperData } from 'src/types/swiper';
 
 import DefaultSwiper from 'src/components/Swiper/DefaultSwiper';
 import TitleAndPrevNextbtn from 'src/components/Swiper/TitleAndPrevNextbtn';
-import { useNavigate } from 'react-router-dom';
 
 interface Props {
   title?: ReactNode;
