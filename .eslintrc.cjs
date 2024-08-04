@@ -7,5 +7,9 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'no-plusplus': 'off',
+    'no-restricted-syntax': 'off',
+    'no-underscore-dangle': 'off',
+    'no-else-return': 'off',
   },
 };

@@ -4,4 +4,4 @@
 
 🔗 _**<a href="https://briefy.vercel.app/">briefy deploy link</a>**_<br />
 
-📕 _**<a href="https://briefy-storybook.vercel.app">briefy storybook deploy link</a>**_
+📕 _**<a href="https://tata-v.github.io/briefy-storybook/">briefy storybook deploy link</a>**_

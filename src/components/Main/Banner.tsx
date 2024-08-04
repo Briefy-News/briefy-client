@@ -2,7 +2,6 @@ import { Button } from 'briefy-design';
 import { useWindowSize } from '@reactuses/core';
 import { useDisclosure } from '@nextui-org/modal';
 import RightArrow from 'src/assets/icons/RightArrow';
-// import letterPng from '@/public/letter.png';
 import { motion } from 'framer-motion';
 import DefaultLayout from 'src/components/Layout/DefaultLayout';
 

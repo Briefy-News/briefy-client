@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { VitePWA, VitePWAOptions } from 'vite-plugin-pwa';
 import * as path from 'path';
@@ -45,20 +45,33 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
 };
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react(), VitePWA(manifestForPlugin)],
-  resolve: {
-    alias: {
-      src: path.resolve(__dirname, './src'),
-      '@ui': path.resolve(__dirname, './libs/ui'),
-    },
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        main: './index.html',
-        sw: './sw.js',
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+
+  return {
+    plugins: [react(), VitePWA(manifestForPlugin)],
+    resolve: {
+      alias: {
+        src: path.resolve(__dirname, './src'),
+        '@ui': path.resolve(__dirname, './libs/ui'),
       },
     },
-  },
+    build: {
+      rollupOptions: {
+        input: {
+          main: './index.html',
+          sw: './sw.js',
+        },
+      },
+    },
+    server: {
+      proxy: {
+        '/api': {
+          target: `${env.VITE_BASE_URL}`,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      },
+    },
+  };
 });
