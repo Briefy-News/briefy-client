@@ -4,17 +4,8 @@ import Banner from 'src/components/Main/Banner';
 import ArticleSwiper from 'src/components/Swiper/ArticleSwiper';
 import NewsLetterSwiper from 'src/components/Swiper/NewsLetterSwiper';
 import Footer from 'src/components/Footer/Footer';
-import { useEffect } from 'react';
-import { extractCookieValue, removeBrowserToken, setCookie } from 'src/utils/cookie';
 
 function MainPage() {
-  useEffect(() => {
-    const accessToken = extractCookieValue('access_token');
-    if (!accessToken) return;
-    setCookie('access', decodeURIComponent(accessToken), { path: '/', secure: true, sameSite: 'strict' });
-    removeBrowserToken('access_token');
-  }, []);
-
   const trendTitle = (
     <div className="block md:flex md:items-center text-base md:text-[1.5rem] text-black900 font-light">
       브리피에서&nbsp;

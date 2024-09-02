@@ -51,6 +51,7 @@ function NewsLetterSwiper({ title, num = 20 } : Props) {
             {[...Array(num)].map((_, idx) => (
               <SwiperSlide key={`newsletter${idx}`}>
                 <NewsLetterCard
+                  src="https://nabxomdrieosmaactvvc.supabase.co/storage/v1/object/public/briefy/snow.jpeg"
                   title={`뉴닉 ${idx + 1}`}
                   category="경제"
                   description="시간이 없어도 세상은 궁금하니까! 세상 돌아가는 소식을 쉽고 재미있게 받아보세요"

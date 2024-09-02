@@ -5,16 +5,15 @@ import ContinueGoogleIcon from '../../assets/icons/ContinueGoogleIcon';
 
 function ContinueGoogle() {
   return (
-    <>
-      <GoogleNavLink
-        to={`${import.meta.env.VITE_BASE_URL}/google/redirect`}
-        className="flex gap-3 justify-center items-center w-full border-2 border-indigo-600
+    <GoogleNavLink
+      to="/"
+      // to={`${import.meta.env.VITE_BASE_URL}/google/redirect`}
+      className="flex gap-3 justify-center items-center w-full border-2 border-indigo-600
         h-[40px] sm:h-[48px] rounded-[6px] sm:rounded-[10px]"
-      >
-        <GoogleIcon />
-        <ContinueGoogleIcon />
-      </GoogleNavLink>
-    </>
+    >
+      <GoogleIcon />
+      <ContinueGoogleIcon />
+    </GoogleNavLink>
   );
 }
 
