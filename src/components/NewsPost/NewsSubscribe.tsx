@@ -12,7 +12,7 @@ function NewsSubscribe() {
       <div className="flex-col pr-[14px] pl-[12px] md:pr-[31px] md:pl-[30px] py-[12px] md:py-[30px] min-w769-max-w1180:w-full lg:w-[792px] h-auto md:h-[416px] rounded-[10px] md:rounded-[16px] border-[1px] border-black300">
         <div className="flex gap-[6px] md:gap-[16px]">
           <ImgBox className="w-[124px] md:min-w-[356px] h-[124px] md:h-[356px] rounded-[8px] md:rounded-[20px] cursor-pointer overflow-hidden">
-            <img className="w-[124px] md:w-[356px] h-[124px] md:h-[356px] object-cover" src="https://ifh.cc/g/t5Z7ol.jpg" alt="news" />
+            <img className="w-[124px] md:w-[356px] h-[124px] md:h-[356px] object-cover" src="https://nabxomdrieosmaactvvc.supabase.co/storage/v1/object/public/briefy/snow.jpeg" alt="news" />
           </ImgBox>
           <div className="pt-[6px] md:pt-[20px] flex flex-col justify-between">
             <div>
